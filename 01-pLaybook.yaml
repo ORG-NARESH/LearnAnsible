@@ -1,0 +1,9 @@
+- name: Running playbook-1
+  hosts: dev
+  tasks: 
+  - name: task1 in playbook1
+    ansible.builtin.debug:
+     msg: "Hello task1"
+  - name: task2 in playbook-1
+    ansible.builtin.debug:
+     msg: "Hello task2"

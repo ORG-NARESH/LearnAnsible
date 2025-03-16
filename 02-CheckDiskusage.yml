@@ -3,7 +3,7 @@
   tasks: 
   - name: task1 in playbook1
     ansible.builtin.debug:
-     msg: "Printing disk util"
+     msg: "Printing disk util in DEV group"
   - name: "check and print desk usage"
     ansible.builtin.shell:
      cmd: df -h
@@ -11,5 +11,12 @@
   - name: display output
     ansible.builtin.debug:
      var: disk_usage.stdout_lines
-    
+  - name: Check the usage of processor Running
+    ansible.builtin.shell: top
+    register: top_usage
+  - name: Display output for processor in dev group
+    ansible.builtin.debug:
+    var: top_usage.stdout_lines
+
+     
     
