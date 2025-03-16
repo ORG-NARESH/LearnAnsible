@@ -22,5 +22,14 @@
     ansible.builtin.debug:
      var: free_usage.stdout_lines
 
+
+################TOP#############
+
+  - name: Check the usage of process Running
+    ansible.builtin.shell: top
+    register: top_usage
+  - name: Display output for process in dev group
+    ansible.builtin.debug:
+     var: top_usage.stdout_lines
      
     
