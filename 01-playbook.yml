@@ -5,7 +5,8 @@
     ansible.builtin.debug:
      msg: "Printing disk util"
   - name: "check and print desk usage"
-    ansible.builtin.shell: df -h
+    ansible.builtin.shell:
+     cmd: df -h
     register: disk_usage
   - name: display output
     ansible.builtin.debug:
