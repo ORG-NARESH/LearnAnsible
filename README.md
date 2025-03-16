@@ -14,9 +14,14 @@ YAML BASICS
 
 - name: AnsiblePlaybook
   hosts: dev
-
+  tasks"
   - name: playbook1 and task1
     ansible.builtin.ping
-    msg: "Hello world"
+     msg: "Hello world"
+
+
+From Machine
+
+ansible-playbook -i inv -e ansible_username=ec2-user   -e ansible_password=DevOps321 01-playbook.yml
   
     

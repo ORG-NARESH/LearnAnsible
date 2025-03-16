@@ -5,6 +5,7 @@
     ansible.builtin.debug:
      msg: "Printing disk util"
   - name: "task2 in playbook1"
-    ansible.builtin.shell: df -h
+    ansible.builtin.shell:
+     cmd: df -h
     
     
