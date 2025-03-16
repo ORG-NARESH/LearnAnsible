@@ -4,8 +4,12 @@
   - name: task1 in playbook1
     ansible.builtin.debug:
      msg: "Printing disk util"
-  - name: "task2 in playbook1"
+  - name: "check and print desk usage"
     ansible.builtin.shell:
      cmd: df -h
+    register: disk_usage
+  - name: display outpu
+    ansible.builtin.debug:
+     var: disk_usage.stdout_lines
     
     
