@@ -12,14 +12,15 @@
     ansible.builtin.debug:
      var: disk_usage.stdout_lines
 
-########Prosessor############
+#######Prosessor############
 
-  # - name: Check the usage of memory Running
-  #   ansible.builtin.shell: free
-  #   register: free_usage
-  # - name: Display output for memory in dev group
-  #   ansible.builtin.debug:
-  #   var: top_usage.stdout_lines
+  - name: Check the usage of memory Running
+    ansible.builtin.shell:
+     cmd: free
+    register: free_usage
+  - name: Display output for memory in dev group
+    ansible.builtin.debug:
+     var: top_usage.stdout_lines
 
      
     
