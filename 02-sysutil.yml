@@ -3,8 +3,17 @@
   tasks:
   - name: Run disk utility
     ansible.builtin.shell: df -h
+    register: DISKUTIL
+    ansible.builtin.debug:
+     msg: printing disk tool info {{ DISKUTIL }}
   - name: Run RAM untlity
     ansible.builtin.shell: free
+    register: RAMUTIL
+    ansible.builtin.debug:
+     msg: printing RAM tool info {{ RAMUTIL }}
+    
   - name: Run processor utility
     ansible.builtin.shell: nproc
+    register: PROCESSORUTIL
+
     
