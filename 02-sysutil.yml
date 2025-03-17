@@ -6,14 +6,14 @@
     register: DISKUTIL
   - name: printing disk utility
     ansible.builtin.debug:
-     msg:  "{{ DISKUTIL.stdout_lines | join('\n') }}"
+     msg:  "{{ DISKUTIL.stdout | join('\n') }}"
   - name: Run RAM untlity
     ansible.builtin.shell: free
     register: RAMUTIL
   - name: printing RAM untlity
     ansible.builtin.debug:
      msg: |-
-       {{ RAMUTIL.stdout_lines | join('\n') }}
+       {{ RAMUTIL.stdout | join('\n') }}
     
   - name: Run processor utility
     ansible.builtin.shell: nproc
