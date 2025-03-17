@@ -1,7 +1,7 @@
 - name: file vars
   hosts: all
   vars_files:
-   - "{{ STAGE }}-vars.yaml"
+   - "{{ env }}-vars.yaml"
   tasks:
   - name: check the ip
     ansible.builtin.shell: ifconfig
