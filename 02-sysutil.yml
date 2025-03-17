@@ -7,11 +7,12 @@
   - name: printing disk utility
     ansible.builtin.debug:
      msg: printing disk tool info {{ DISKUTIL.stdout_lines | join('\n') }}
-  # - name: Run RAM untlity
-  #   ansible.builtin.shell: free
-  #   register: RAMUTIL
-  #   ansible.builtin.debug:
-  #    msg: printing RAM tool info {{ RAMUTIL }}
+  - name: Run RAM untlity
+    ansible.builtin.shell: free -m
+    register: RAMUTIL
+  - name: printing RAM untlity
+    ansible.builtin.debug:
+     msg: printing RAM tool info {{ RAMUTIL.stdout_lines | join('\n') }}
     
   # - name: Run processor utility
   #   ansible.builtin.shell: nproc
