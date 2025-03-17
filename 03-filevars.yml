@@ -1,5 +1,5 @@
 - name: file vars
-  hosts: dev
+  hosts: all
   vars_files:
    - "{{ STAGE }}-vars.yaml"
   tasks:
