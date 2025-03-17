@@ -12,7 +12,8 @@
     register: RAMUTIL
   - name: printing RAM untlity
     ansible.builtin.debug:
-     msg: printing RAM tool info {{ RAMUTIL.stdout_lines | join('\n') }}
+     msg: |-
+      Printing RAM tool info {{ RAMUTIL.stdout_lines | join('\n') }}
     
   # - name: Run processor utility
   #   ansible.builtin.shell: nproc
