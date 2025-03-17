@@ -8,4 +8,4 @@
     register: IFCONFIG
   - name: print ip info
     ansible.builtin.debug:
-     msg: "{{ IFCONFIG }} this is {{ STAGE }}-vars.yaml which manage by {{ DEVLEAD }}"
+     msg: "{{ IFCONFIG }} this is {{ ENV }}-vars.yaml which manage by {{ DEVLEAD }}"
