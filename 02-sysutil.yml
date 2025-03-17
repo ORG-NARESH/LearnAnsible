@@ -15,8 +15,12 @@
      msg: |-
        {{ RAMUTIL.stdout_lines | join('\n') }}
     
-  # - name: Run processor utility
-  #   ansible.builtin.shell: nproc
-  #   register: PROCESSORUTIL
+  - name: Run processor utility
+    ansible.builtin.shell: nproc
+    register: PROCESSORUTIL
+  - name: processor utility
+    ansible.builtin.debug:
+     msg: |-
+        {{ PROCESSORUTIL.stdout }}
 
     
