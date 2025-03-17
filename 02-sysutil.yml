@@ -5,7 +5,7 @@
     ansible.builtin.shell: df -h
     register: DISKUTIL
     ansible.builtin.debug:
-     msg: printing disk tool info {{ DISKUTIL }}
+     msg: printing disk tool info {{ DISKUTIL.stdoutlines }}
   - name: Run RAM untlity
     ansible.builtin.shell: free
     register: RAMUTIL
