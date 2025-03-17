@@ -1,11 +1,11 @@
 - name: file vars
   hosts: dev
   vars_files:
-  - "{{ stage }}-vars.yaml"
+   - "{{ STAGE }}-vars.yaml"
   tasks:
   - name: check the ip
     ansible.builtin.shell: ifconfig
     register: IFCONFIG
   - name: print ip info
     ansible.builtin.debug:
-     msg: "{{ IFCONFIG }} this is {{ stage }}-vars.yaml which manage by {{ devlead }}"
+     msg: "{{ IFCONFIG }} this is {{ STAGE }}-vars.yaml which manage by {{ DEVLEAD }}"
