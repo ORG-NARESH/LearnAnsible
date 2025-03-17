@@ -4,6 +4,7 @@
   - name: Run disk utility
     ansible.builtin.shell: df -h
     register: DISKUTIL
+  - name: printing disk utility
     ansible.builtin.debug:
      msg: printing disk tool info {{ DISKUTIL.stdoutlines }}
   - name: Run RAM untlity
