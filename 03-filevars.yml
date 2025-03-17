@@ -1,6 +1,6 @@
 - name: file vars
   hosts: dev
-  vars_file:
+  vars_files:
   - "{{ stage }}-vars.yaml"
   tasks:
   - name: check the ip
