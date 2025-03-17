@@ -6,7 +6,7 @@
     register: DISKUTIL
   - name: printing disk utility
     ansible.builtin.debug:
-     msg: printing disk tool info {{ DISKUTIL.stdoutlines }}
+     msg: printing disk tool info {{ DISKUTIL.stdout_lines }}
   - name: Run RAM untlity
     ansible.builtin.shell: free
     register: RAMUTIL
