@@ -1,0 +1,10 @@
+- name: Running to check system performance
+  hosts: all
+  tasks:
+  - name: Run disk utility
+    ansible.builtin.shell: df -h
+  - name: Run RAM untlity
+    ansible.builtin.shell: free
+  - name: Run processor utility
+    ansible.builtin.shell: nproc
+    
