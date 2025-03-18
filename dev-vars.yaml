@@ -1,2 +1,3 @@
-ENV: "dev"                     
+ENV: "dev"
+VERSION: "DEV-V1"
 DEVLEAD: "naresh"
